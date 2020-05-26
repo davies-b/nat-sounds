@@ -78,7 +78,7 @@ plot(f,10.^y,'LineWidth',2);
 parvec(1) = -p(1);
 xlabel('$\omega$','interpreter','latex')
 ylabel('$S(\omega)$','interpreter','latex')
-legend('$\bar{S_{A_n}}$','$S_{A}$','interpreter','latex');
+legend('$\overline{S_{A}}$','$S_{A}$','interpreter','latex');
 set(gca,'TickLabelInterpreter','latex')
 
 
@@ -94,4 +94,4 @@ plot(f(1,:),10.^y,'LineWidth',2);
 parvec(4) = -p(1);
 xlabel('$\omega$','interpreter','latex')
 ylabel('$S(\omega)$','interpreter','latex')
-legend('$\overline{S_{\phi_n}}$','$S_{\phi}$','interpreter','latex');
+legend('$\overline{S_{\phi}}$','$S_{\phi}$','interpreter','latex');
