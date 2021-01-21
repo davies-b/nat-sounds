@@ -4,7 +4,6 @@ L = 35e-3;              % length of cochlea
 N = 22;                 % number of resonators
 
 s = 1.05;
-a = 0.0001;
 a = 0.00016;
 
 for i = 1:N
