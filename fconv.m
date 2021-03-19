@@ -24,4 +24,3 @@ H=fft(h, Ly2);	           % Fast Fourier transform
 Y=X.*H;        	           % 
 y=real(ifft(Y, Ly2));      % Inverse fast Fourier transform
 y=y(1:1:Ly);               % Take just the first N elements
-y=y/max(abs(y));           % Normalize the output

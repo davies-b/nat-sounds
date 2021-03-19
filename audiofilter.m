@@ -11,17 +11,8 @@ L = length(x);                % Length of signal
 t = (0:L-1)*T;                % Time vector for signal
 N = length(res);              % Number of resonators
 
+a = zeros(N,2*L-1);
 for n = 1:N
-    % Define the filter kernel
-    h = exp(imag(res(n))*t).*cos(real(res(n)*t));
     % Compute the convolution using the fft/ifft
-    a(n,:) = fconv(x, h);
+    a(n,:) = fconv(h(t,n,res,V), x);
 end
-
-%% Apply k-th band-pass filter
-% a = zeros(N,L-1);
-% for n = 1:N
-%     for k = 1:L-1
-%         a(n,k) = dot( h(t-t(k),n,res,V) , x );        % filtered signal
-%     end
-% end
